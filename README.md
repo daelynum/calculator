@@ -1,2 +1,2 @@
-# calculator-
+# calculator
 calculator using FastApi framework 
