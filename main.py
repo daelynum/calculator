@@ -9,7 +9,7 @@ from schemas import Calculate
 app = FastAPI()
 
 
-@app.post('/calc', status_code=status.HTTP_201_CREATED, tags=['Service calculator'])
+@app.post('/calc', response_model=Calculate, status_code=status.HTTP_201_CREATED, tags=['Service calculator'])
 def calculate(request: str, db: Session = Depends(get_db)):
     try:
         """вариант для успешного выполнения функции"""
